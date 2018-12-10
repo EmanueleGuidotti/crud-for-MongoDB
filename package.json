@@ -1,0 +1,32 @@
+{
+  "name": "crud-for-mongodb",
+  "version": "1.0.0",
+  "description": "a sets of pre built NodeJS rest api for MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanueleGuidotti/crud-for-MongoDB.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "MongoDB",
+    "CRUD",
+    "API",
+    "REST"
+  ],
+  "author": "Emanuele Guidotti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmanueleGuidotti/crud-for-MongoDB/issues"
+  },
+  "homepage": "https://github.com/EmanueleGuidotti/crud-for-MongoDB#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "graceful-fs": "^4.1.15",
+    "mongodb": "^3.1.10",
+    "multer": "^1.4.1"
+  }
+}
