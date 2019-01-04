@@ -1,0 +1,11 @@
+{
+	"webapp":
+	{
+        "host": "localhost",
+        "port": "27017",
+		"schema": "mongo_crud",
+		"user": "mongo_crud",
+		"password": "mongo_crud",
+		"authMechanism": "DEFAULT"
+	}
+}

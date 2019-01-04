@@ -1,32 +1,26 @@
 const MongoClient = require('mongodb').MongoClient;
 const DBconfig = require('../config/components/mongo_config');
 
-//let uri = getURI();
-//let uri = 'mongodb://10.10.8.124:27017/adam_dashboard';
+// DB global instance
 let db;
 
-/** Create the database uri
- * @method getURI 
- */
-function getURI(){
-    DBconfig.GetURI().then(function (uri) {
-        console.log('DB_uri', uri);
-        return uri;
-    })
-}
 
-/** Create the database connection pooling
+/** Open the database connection pooling
  * @method connect
  * @param getURI - Url of the database
  * @param poolSize - Number of connections in the connection pool
  */
-MongoClient.connect(getURI(), {  
-    poolSize: 10
-    // other options can go here
-  }, function(err, database) {
-    if (err) return console.error('MongoClient connection error: ', err);
-    else database=db;
-});
+DBconfig.GetURI().then(function(uri){
+    MongoClient.connect(uri, {  
+        poolSize: 10
+        // other options can go here
+    }, function(err, database) {
+        if (err) return console.error('MongoClient connection error: ', err);
+        else db=database;
+    });
+}) 
+
+
 
 /** Insert one document
  * @method persistOne
@@ -152,7 +146,7 @@ module.exports.findOne = function (collectionName, collectionQuery) {
     });
 };
 
-/* * Find latest document in collection
+/** Find latest document in collection
  * @method findLatest
  * @param collectionName - The name of the collection to modify
  * @operator $natural - the $natural operator uses the following syntax to return documents in the order they exist on disk: $natural: 1 from olders to newer, or $natural: -1 from newer to older
