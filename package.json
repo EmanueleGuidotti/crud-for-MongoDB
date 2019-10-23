@@ -4,7 +4,8 @@
   "description": "a sets of pre built NodeJS rest api for MongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,16 @@
   },
   "homepage": "https://github.com/EmanueleGuidotti/crud-for-MongoDB#readme",
   "dependencies": {
+    "@shelf/jest-mongodb": "^1.0.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "graceful-fs": "^4.1.15",
+    "http-errors": "^1.7.2",
+    "jest": "^24.8.0",
     "mongodb": "^3.1.10",
+    "mongodb-memory-server": "^6.0.1",
+    "morgan": "^1.9.1",
     "multer": "^1.4.1"
   }
 }
