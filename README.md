@@ -1,7 +1,7 @@
 # crud for MongoDB
 <em>A set of pre-built NodeJS CRUD operations and REST API for mongoDB</em>.
 
-This repository is intended as a blueprint or as a starter point for a back end Javascript archietecture built with Node JS CRUD API with mongoDB.
+This repository is intended as a blueprint or as a starter point for a back end Javascript archietecture built with Node JS and MongoDB.
 
 ## Installation
 Copy the repository and edit mongoDB.conf.json file
