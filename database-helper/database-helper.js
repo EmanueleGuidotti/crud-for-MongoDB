@@ -9,9 +9,7 @@ let _db = null;
 let _client = null;
 
 /** Open the database connection pooling
- * @method connect
- * @param getURI - Url of the database
- * @param poolSize - Number of connections in the connection pool
+ * @param callback - Function error callback
  */
 
 module.exports.start = async function(callback) {
